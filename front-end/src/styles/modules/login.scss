@@ -1,0 +1,31 @@
+.mask{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0, .5);
+    position:fixed;
+    z-index: 1003;
+    left:0;
+    top:0;
+}
+.container{
+    .form-login{
+        .checkbox{
+            #remember-me{
+                position: relative;
+                margin-left: 0;
+                vertical-align: bottom;
+            }
+            .pull-right{
+                margin-top:4px;
+            }
+        }
+    }
+}
+.signup{
+    .btn-theme{
+        margin-top:24px;
+    }
+    .worning{
+        color: red;
+    }
+}

@@ -1,0 +1,131 @@
+    <!--header start-->
+    <header class="header black-bg">
+    </header>
+    <!--header end-->
+    <!--sidebar start-->
+    <aside>
+            <div id="sidebar" class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                <p class="centered"><a href="profile.html"><img src="https://templatemag.com/demo/templates/Dashio/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
+                <h5 class="centered" id="myname">{{username}}</h5>
+                <li class="mt" >
+                  <a  href="#/home" data-url='home'>
+                    <i class="fa fa-dashboard"></i>
+                    <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="sub-menu" >
+                  <a href="#/position" data-url='position'>
+                    <i class="fa fa-desktop"></i>
+                    <span>UI Elements</span>
+                  </a>
+                  <!-- <ul class="sub">
+                    <li><a href="#/position">General</a></li>
+                    <li><a>Buttons</a></li>
+                    <li><a>Panels</a></li>
+                    <li><a>Font Awesome</a></li>
+                  </ul> -->
+                </li>
+                <li class="sub-menu" data-url=''>
+                  <a href="javascript:;">
+                    <i class="fa fa-cogs"></i>
+                    <span>Components</span>
+                    </a>
+                  <ul class="sub">
+                    <li><a href="javascript:;">Grids</a></li>
+                    <li><a href="javascript:;">Calendar</a></li>
+                    <li><a href="javascript:;">Gallery</a></li>
+                    <li><a href="javascript:;">Todo List</a></li>
+                    <li><a href="javascript:;">Dropzone File Upload</a></li>
+                    <li><a href="javascript:;">Inline Editor</a></li>
+                    <li><a href="javascript:;">Multiple File Upload</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu" data-url=''>
+                  <a href="javascript:;">
+                    <i class="fa fa-book"></i>
+                    <span>Extra Pages</span>
+                    </a>
+                  <ul class="sub">
+                    <li><a href="javascript:;">Blank Page</a></li>
+                    <li><a href="javascript:;">Login</a></li>
+                    <li><a href="javascript:;">Lock Screen</a></li>
+                    <li><a href="javascript:;">Profile</a></li>
+                    <li><a href="invoijavascript:">Invoice</a></li>
+                    <li><a href="javascript:;">Pricing Table</a></li>
+                    <li><a href="fajavascript:;">FAQ</a></li>
+                    <li><a href="javascript:;">404 Error</a></li>
+                    <li><a href="javascript:;">500 Error</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu" data-url=''>
+                  <a href="javascript:;">
+                    <i class="fa fa-tasks"></i>
+                    <span>Forms</span>
+                    </a>
+                  <ul class="sub">
+                    <li><a href="javascript:;">Form Components</a></li>
+                    <li><a href="javascript:;">Advanced Components</a></li>
+                    <li><a href="javascript:;">Form Validation</a></li>
+                    <li><a href="javascript:;">Contact Form</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu" data-url=''>
+                  <a href="javascript:;">
+                    <i class="fa fa-th"></i>
+                    <span>Data Tables</span>
+                    </a>
+                  <ul class="sub">
+                    <li><a href="javascript:;">Basic Table</a></li>
+                    <li><a href="javascript:;">Responsive Table</a></li>
+                    <li><a href="javascript:;">Advanced Table</a></li>
+                  </ul>
+                </li>
+                <li data-url=''>
+                  <a href="inbox.html">
+                    <i class="fa fa-envelope"></i>
+                    <span>Mail </span>
+                    <span class="label label-theme pull-right mail-info">2</span>
+                    </a>
+                </li>
+                <li class="sub-menu" data-url=''>
+                  <a href="javascript:;">
+                    <i class=" fa fa-bar-chart-o"></i>
+                    <span>Charts</span>
+                    </a>
+                  <ul class="sub">
+                    <li><a href="javascript:;">Morris</a></li>
+                    <li><a href="javascript:;">Chartjs</a></li>
+                    <li><a href="javascript:;">Flot Charts</a></li>
+                    <li><a href="javascript:;">xChart</a></li>
+                  </ul>
+                </li>
+                <li class="sub-menu" data-url=''>
+                  <a href="javascript:;">
+                    <i class="fa fa-comments-o"></i>
+                    <span>Chat Room</span>
+                    </a>
+                  <ul class="sub">
+                    <li><a href="">Lobby</a></li>
+                    <li><a href=""> Chat Room</a></li>
+                  </ul>
+                </li>
+                <li data-url=''>
+                  <a href="">
+                    <i class="fa fa-map-marker"></i>
+                    <span>Google Maps </span>
+                    </a>
+                </li>
+              </ul>
+              <!-- sidebar menu end-->
+            </div>
+    </aside>
+    <!--sidebar end-->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper" id="mainwrapper">
+
+      </section>
+    </section>
+    <!--main content end-->
