@@ -1,4 +1,7 @@
 const bcrypt = require('bcrypt')
+const jwt = require('jsonwebtoken')
+const fs = require('fs')
+const path = require('path')
 
 const hash = (password) => {
   return new Promise((resolve, reject) => {
@@ -17,8 +20,24 @@ const compare = (password, hash) => {
     })
   })
 }
-
+const generateToken = (username) => {
+  return new Promise((resolve, reject) => {
+    let cert = fs.readFileSync(path.resolve(__dirname, '../key/rsa_private_key.pem'))
+    jwt.sign(
+      {
+        username
+      }, 
+      cert,
+      { 
+        algorithm: 'RS256' 
+      },
+      (err, token) => {
+        resolve(token)
+      })
+  })
+}
 module.exports = {
   hash,
-  compare
+  compare,
+  generateToken
 }

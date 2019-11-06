@@ -20,3 +20,59 @@
 
 .signup .worning {
   color: red; }
+
+#main-content .title {
+  margin-top: 60px;
+  width: 100%;
+  display: inline-block; }
+  #main-content .title ol {
+    width: 100%; }
+    #main-content .title ol:first-child {
+      font-size: 20px; }
+
+#main-content .wrapper {
+  margin-top: 0;
+  background: #fff; }
+
+tr .btn-block {
+  width: auto; }
+
+.box-title .btn-block {
+  width: auto; }
+
+.box-title {
+  display: flex;
+  justify-content: space-between; }
+
+.box-body .table-striped td img {
+  width: 64px;
+  height: 90px; }
+
+.box-body label {
+  font-size: 16px;
+  color: #000; }
+
+.box-footer ul li a.active {
+  z-index: 2;
+  color: #23527c;
+  background-color: #eee;
+  border-color: #ddd; }
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+
+#mainwrapper {
+  width: 94%;
+  margin: 0 auto;
+  flex: 1; }
+
+.table tbody tr td {
+  vertical-align: middle; }
+
+#messagebox {
+  width: 100%;
+  height: 400px;
+  background: #fff; }

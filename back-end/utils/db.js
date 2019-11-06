@@ -6,6 +6,20 @@ const Users = mongoose.model('user', {
   password: String
 })
 
+const Positions = mongoose.model('films', {
+  id:String,
+  img:String,
+  nm:String,
+  preShow:String,
+  rt:String,
+  sc:String,
+  showInfo:String,
+  star:String,
+  wish:String,
+  createTime:String
+})
+
 module.exports = {
-  Users
+  Users,
+  Positions
 }

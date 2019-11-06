@@ -1,1 +1,76 @@
-<h1>position</h1>
+<div class="box">
+        <div class="box-header with-border">
+          <h3 class="box-title">
+            <button type="button" id="btn-add" class="btn btn-block btn-success"><span class="fa fa-plus-circle"></span> 添加</button>
+            <div class="col-lg-3">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Go!</button>
+                </span>
+              </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+          </h3>
+        </div>
+        {{if list.length === 0}}
+        <table class="table table-striped">
+          <tr>
+            <td style="text-align: center;">暂无数据~~</td>
+          </tr>
+        </table>
+        {{else}}
+
+        <div class="box-body">
+          <table class="table table-striped">
+            <thead>
+              <td >#</td>
+              <td >海报</td>
+              <td >电影ID</td>
+              <td >电影名称</td>
+              <td >是否是预售</td>
+              <td >上映时间</td>
+              <td >电影评分</td>
+              <td >放映信息</td>
+              <td >明星</td>
+              <td >想看的人数</td>
+              <td >创建的时间</td>
+              <td >操作</td>
+            </thead>
+            <tbody class="table-striped">
+              {{each list}}
+              <tr>
+                  <td >{{$index+1}}</td>
+                  <td ><img src="http://10.9.49.176:3000/uploads/{{$value.img}}"/></td>
+                  <td >{{$value.id}}</td>
+                  <td >{{$value.nm}}</td>
+                  <td >{{$value.preShow}}</td>
+                  <td >{{$value.rt}}</td>
+                  <td >{{$value.sc}}</td>
+                  <td >{{$value.showInfo}}</td>
+                  <td >{{$value.star}}</td>
+                  <td >{{$value.wish}}</td>
+                  <td >{{$value.createTime}}</td>
+                  <td ><button class="btn btn-block btn-success updatebtn" data-id="{{$value._id}}" >修改</button><button class="btn btn-block btn-danger removebtn" data-id="{{$value._id}}" data-img="{{$value.img}}">删除</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+          </table>
+        </div>
+        {{if from !== 'search'}}
+        <div class="box-footer clearfix">
+          <ul class="pagination pagination-sm no-margin pull-right">
+            <li><a href="javascript:void(0);" class="page-pre">&laquo;</a></li>
+            {{each pageCount}}
+              {{if currentPage == $index+1}}
+              <li><a class="active page-number" href="javascript:void(0);">{{$index+1}}</a></li>
+              {{else}}
+              <li><a class="page-number" href="javascript:void(0);">{{$index+1}}</a></li>
+              {{/if}}
+            {{/each}}
+            <li><a href="javascript:void(0);" class="page-next">&raquo;</a></li>
+          </ul>
+        </div>
+        {{/if}}
+        {{/if}}
+      </div>
+      <!-- On rows

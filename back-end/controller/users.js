@@ -29,7 +29,7 @@ const signup = async function(req, res, next) {
 const signupfilter = async function(req, res, next){
   res.set('Content-Type', 'application/json; charset=utf-8')
   let { username } = req.body
-
+  console.log(username)
   let result = await usersModel.findOne({username})
   if (!result) {
     res.render('succ', {
@@ -68,9 +68,10 @@ const signin = async function(req, res, next) {
   if (result) {
     let compareResult = await tools.compare(password, result.password)
     if (compareResult) {
-      //种cookie
-      req.session.username= username
-
+      //发token
+      let token = await tools.generateToken(username)
+      //将token埋在heaader里传给前端
+      res.header('X-Access-Token', token)
       res.render('succ', {
         data: JSON.stringify({
           type: 'signin',

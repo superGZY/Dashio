@@ -1,0 +1,59 @@
+<!-- general form elements -->
+<div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">电影信息添加</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form" id="positionaddForm" method="post" action="/api/position" enctype="multipart/form-data">
+          <div class="box-body">
+            <div class="form-group">
+              <label for="id">电影ID</label>
+              <input type="text" class="form-control" id="id" name="id" placeholder="请输入电影ID">
+            </div>
+
+            
+            <div class="form-group">
+              <label for="id">电影海报</label>
+              <img id="preview" style="width:64px;height:90px;display: block;margin-bottom: 20px;" src="http://10.9.49.176:3000/assets/images/100.jpg"/>
+              <input type="file"  id="img" name="img" placeholder="选择图片" value="选择图片">
+            </div>
+            <div class="form-group">
+              <label for="nm">电影名称</label>
+              <input type="text" class="form-control" id="nm" name="nm" placeholder="请输入电影名称">
+            </div>
+            <div class="form-group">
+              <label for="preShow">是否是预售</label>
+              <input type="radio" name='preShow' value="true">true
+              <input type="radio" name='preShow' value="false">false
+            </div>
+            <div class="form-group">
+              <label for="rt">上映时间</label>
+              <input type="text" class="form-control" id="rt" name="rt" placeholder="请输入上映时间">
+            </div>
+            <div class="form-group">
+                <label for="sc">电影评分</label>
+                <input type="text" class="form-control" id="sc" name="sc" placeholder="请输入电影评分">
+            </div>
+            <div class="form-group">
+                <label for="showInfo">放映信息</label>
+                <input type="text" class="form-control" id="showInfo" name="showInfo" placeholder="请输入放映信息">
+            </div>
+            <div class="form-group">
+                <label for="star">明星</label>
+                <input type="text" class="form-control" id="star" name="star" placeholder="请输入参演明星">
+            </div>
+            <div class="form-group">
+                <label for="wish">想看的人数</label>
+                <input type="text" class="form-control" id="wish" name="wish" placeholder="请输入想看的人数">
+            </div>
+          </div>
+          <!-- /.box-body -->
+      
+          <div class="box-footer">
+            <button type="button" class="btn btn-default">返回</button>
+            <button type="submit" class="btn btn-info pull-right">提交</button>
+          </div>
+        </form>
+      </div>
+      <!-- /.box -->

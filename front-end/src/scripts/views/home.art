@@ -1,1 +1,4 @@
-<h1>home</h1>
+<div id="messagebox">
+</div>
+<input type="text" id="mes-inp"/>
+<input type="button" id="mes-btn" value="发送"/>

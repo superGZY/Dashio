@@ -1,6 +1,7 @@
 
 import httpModel from '../models/http'
 import navView from '../views/nav.art'
+import store from 'store'
 class Users {
   constructor(){
     this.timer=''
@@ -80,20 +81,15 @@ class Users {
       })
       $('header').html(html)
       $('.mask').remove()
-        //点击事件
-        $('#nav-accordion .sub-menu').on('click',async function(){
-          let result = await httpModel.post({
-              url: '/api/users/isSignin',
-              type:'GET'
-          })
-          console.log(result)
-      })
-      //退出
+      
       $('.nav .logout').click(async function(){
         let result = await httpModel.post({
           url: '/api/users/signout',
           type:'GET'
         })
+
+        store.set('token', '')
+        store.set('username','')
         location.reload()
       })
     }

@@ -3,9 +3,10 @@ import loginView from "../views/login.art"
 import usersController from "../controllers/users"
 import httpModel from "../models/http"
 import navView from "../views/nav.art"
+import store from 'store'
 class Layout{
     constructor(){
-        this.username='1'
+        this.username=store.get('username')
         this.render()
         this.isSign = false
     }
@@ -58,6 +59,8 @@ class Layout{
           url: '/api/users/signout',
           type:'GET'
         })
+        store.set('token', '')
+        store.set('username','')
         location.reload()
       })
     }
@@ -66,9 +69,7 @@ class Layout{
             url: '/api/users/isSignin',
             type:'GET'
         })
-        let username = result.data.username
-        this.isSign = username ? true : false
-        this.username = username
+        this.isSign = result.ret ? true : false
     }
 }
 export default new Layout()

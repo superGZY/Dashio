@@ -77,12 +77,12 @@ function gulpServer() {
     name: 'Dist App',
     root: devPath,
     port: 8000,
-    host: 'localhost',
+    host: '10.9.49.176',
     livereload: true,
     middleware: () => {
       return [
         proxy('/api', {
-          target: 'http://localhost:3000',
+          target: 'http://10.9.49.176:3000',
           changeOrigin: true
         })
       ]

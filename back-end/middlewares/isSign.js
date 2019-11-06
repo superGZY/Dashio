@@ -1,6 +1,7 @@
 const isSignin = function(req, res, next){
     res.set('Content-Type', 'application/json; charset=utf-8')
-    if (req.session.username) {
+    let token = req.get('X-Access-Token')
+    if (token) {
       if (req.path === '/isSignin') {
         res.render('succ', {
           data: JSON.stringify({
